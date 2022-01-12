@@ -10,4 +10,4 @@ This code (gold.py) is not optimized to work 100% of the time, there are pieces 
 
 If there are bugs please do let me know.
 
-All in all this was fun to make, I knew nothing of Python, but have an alright background with Java. I just stared at the code and played around with it until I understood how Python works. Started without any Python knowledge to a bit now.
+All in all this was fun to make, I knew nothing of Python, but have an alright background with Java. I just stared at the code and played around with it until I understood how Python works. Started without any Python knowledge to now know a bit.
