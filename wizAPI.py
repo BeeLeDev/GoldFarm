@@ -233,6 +233,10 @@ class wizAPI:
 
     def is_turn_to_play(self):
         """ matches a yellow pixel in the 'pass' button """
+
+        #had to get a screenshot of the window to see what 'self' was, turns out they were a few pixels off because of it
+        """ use the gay.png and paint.net to get position of pixels for x and y """
+        self.screenshot('gay.png')
         return self.pixel_matches_color((242, 398), (255, 255, 0), 20)
 
     def wait_for_next_turn(self):
@@ -409,11 +413,6 @@ class wizAPI:
             return False
 
     def enchant(self, spell_name, enchant_name, threshold=0.1, silent_fail=False):
-
-        #screenshot during enchant period as it would mean we would be in card selection which is when the monster hp pops up.
-        #we screenshot it to be able to change the values in count_enemies method.
-        self.screenshot('findHealth.png')
-
         """ Attemps the enchant 'spell_name' with 'enchant_name' """
         if self.find_spell(spell_name, threshold=threshold) and self.find_spell(enchant_name, recapture=False, threshold=threshold):
             print('Enchanting', spell_name, 'with', enchant_name)
@@ -491,7 +490,7 @@ class wizAPI:
         num_enemies = 0
         for i in range(4):
             #CHANGE THE VALUES 'H' AND 'P' BASED ON MONSTER YOU ARE FARMING
-            #USE 'findHealth.png' in this folder and paint.net to find x and y of red pixels in health bars
+            #USE 'gay.png' in this folder and paint.net to find x and y of red pixels in health bars
             """
             (H, P)
             Ghultures: 148, 169

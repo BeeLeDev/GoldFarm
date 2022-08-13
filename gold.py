@@ -27,7 +27,7 @@ def print_time(timer):
     seconds = math.floor(timer % 60)
     print('Round lasted {} minutes and {} seconds.'.format(minutes, seconds))
 
-#where the bot starts
+
 ROUND_COUNT = 0
 while True:
     ROUND_COUNT += 1
@@ -57,7 +57,6 @@ while True:
     print('waiting for turn to play')
     player.wait_for_turn_to_play()
     print('is turn to play')
-    
 
     inFight = not player.is_idle()
     while inFight:
