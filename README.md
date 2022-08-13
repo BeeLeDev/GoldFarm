@@ -1,4 +1,4 @@
- GoldFarm
+#GoldFarm
 Gold farming code using wizAPI by Jake Belanger:
 https://github.com/Jacob124/wizAPI
 
