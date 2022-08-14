@@ -36,33 +36,35 @@ while True:
     print("entering dungeon")
     player.press_key('x')
 
-    #TEMPORARY UNTIL I SOLVE AWAIT_FINISHED_LOADING
+    #temporary timer for loading screen when exiting dungeon
     #player.wait(14)
 
     #dungeon timer start
     print("timer start")
+    #extra 1 second added as i am taking walking time to spot position into consideration
     player.wait(11)
     await_finished_loading(player)
-    player.screenshot("loading_screen.png")
 
     #if we are still in loading screen, wait
     #is_idle based on pink pet icon
-    #pink pet icon wouldnt be there if on loading screen
+    #pink pet icon wouldn't be there if you are on the loading screen
     while not player.is_idle():
         print("waiting to move")
         player.wait(1)
 
     #go into battle after loading is done
-    #i assume loading takes longer than 14 seconds, is.idle returns false which skips this, then waits for turn before going into battle
     while player.is_idle():
         print('moving')
         player.hold_key('w', 3)
         print('should now be in battle')
 
+    #wait for turn once in battle
     print("waiting for turn")
     player.wait_for_turn_to_play()
     print("player turn")
 
+    #enchants and select card
+    #AOE cards only, bot doesn't pick a target
     inFight = not player.is_idle()
     while inFight:
         if player.enchant('dk', 'epic') or player.find_spell('dk-enchanted') or player.find_spell('dk-enchanted2'):
@@ -82,6 +84,7 @@ while True:
     print_time(time.time() - START_TIME)
 
     #in case game gets dumb and tries to move before fight is over
+    #this is usually where a bug happens as when the battle is over, is_idle can see the pink pet icon and returns that you are idle, it will then try to move... the problem is even when the pink pet icon appears, it does not mean you can move exactly yet, so a timer is placed to 'hopefully' fix that issue
     player.wait(1.5)
     #get out of the dungeon
     print('exiting dungeon')
@@ -90,11 +93,7 @@ while True:
     player.wait(1.5)
     print("dungeon exited")
 
-    #apparently when the game loads too fast this doesnt work
     await_finished_loading(player)
 
+    #temporary timer for loading screen when exiting dungeon
     #player.wait(4.5)
-
-    #wait for animation after finish loading
-    #player.wait(.75)
-    #go to the exit, by going to where the arrow is pointed and going forward
