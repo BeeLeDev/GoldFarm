@@ -10,7 +10,7 @@ def await_finished_loading(self):
         player.wait(.2)
     print('done')
     while not player.is_idle():
-        player.wait(.5)
+        player.wait(2)
 
 
 def print_separator(*args):
@@ -38,13 +38,19 @@ while True:
 
     player.press_key('x')
 
-    #wait for dungeon to load
+    #TEMPORARY UNTIL I SOLVE AWAIT_FINISHED_LOADING
     player.wait(14)
+
+    #dungeon timer start
+    #player.wait(11)
+    #await_finished_loading(player)
+    print("finished loading")
 
     #if we are still in loading screen, wait
     #is_idle based on pink pet icon
     #pink pet icon wouldnt be there if on loading screen
     while not player.is_idle():
+        print("waiting to move")
         player.wait(1)
 
     #go into battle after loading is done
@@ -54,10 +60,9 @@ while True:
         player.hold_key('w', 2)
         print('should now be in battle')
 
-    print('waiting for turn to play')
+    print("waiting for turn")
     player.wait_for_turn_to_play()
-    print('is turn to play')
-    
+    print("player turn")
 
     inFight = not player.is_idle()
     while inFight:
@@ -76,7 +81,7 @@ while True:
             inFight = False
 
     print_time(time.time() - START_TIME)
-    #in case game gests dumb and tries to move before fight is over
+    #in case game gets dumb and tries to move before fight is over
     player.wait(1)
     #get out of the dungeon
     player.hold_key('a', .55)
@@ -86,9 +91,6 @@ while True:
     #await_finished_loading(player)
     player.wait(4.5)
 
-    #waiut for animation after finish loading
+    #wait for animation after finish loading
     #player.wait(.75)
-
-
-
     #go to the exit, by going to where the arrow is pointed and going forward

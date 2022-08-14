@@ -500,7 +500,7 @@ class wizAPI:
             H = 148
             P = 169
             #H is position of one of the red pixels in the 1ST health bar
-            #P is difference between the 1ST and the 2ND rex pixels in the health bar (usually 169)
+            #P is difference between the 1ST and the 2ND red pixels in the health bar (usually 169)
             X = (P * (i)) + H
             if self.pixel_matches_color((X, Y), COLOR, threshold=30):
                 num_enemies += 1

@@ -1,0 +1,281 @@
+=========================================
+++++++++++++++++ ROUND 1 ++++++++++++++++
+=========================================
+finished loading
+waiting to move
+waiting to move
+waiting to move
+moving
+should now be in battle
+moving
+should now be in battle
+moving
+should now be in battle
+waiting for turn
+player turn
+Enchanting dk with epic
+Casting dk-enchanted
+One or more spells couldn't be found: dk epic
+Round lasted 1 minutes and 26 seconds.
+=========================================
+++++++++++++++++ ROUND 2 ++++++++++++++++
+=========================================
+finished loading
+moving
+should now be in battle
+moving
+should now be in battle
+moving
+should now be in battle
+waiting for turn
+player turn
+Enchanting dk with epic
+One or more spells couldn't be found: dk epic
+Round lasted 1 minutes and 14 seconds.
+=========================================
+++++++++++++++++ ROUND 3 ++++++++++++++++
+=========================================
+finished loading
+waiting to move
+waiting to move
+moving
+should now be in battle
+moving
+should now be in battle
+moving
+should now be in battle
+waiting for turn
+player turn
+Enchanting dk with epic
+Casting dk-enchanted
+Round lasted 0 minutes and 54 seconds.
+=========================================
+++++++++++++++++ ROUND 4 ++++++++++++++++
+=========================================
+finished loading
+moving
+should now be in battle
+moving
+should now be in battle
+moving
+should now be in battle
+waiting for turn
+player turn
+Enchanting dk with epic
+Casting dk-enchanted
+Round lasted 1 minutes and 0 seconds.
+=========================================
+++++++++++++++++ ROUND 5 ++++++++++++++++
+=========================================
+finished loading
+moving
+should now be in battle
+moving
+should now be in battle
+moving
+should now be in battle
+waiting for turn
+player turn
+Enchanting dk with epic
+Casting dk-enchanted
+Round lasted 0 minutes and 51 seconds.
+=========================================
+++++++++++++++++ ROUND 6 ++++++++++++++++
+=========================================
+finished loading
+moving
+should now be in battle
+moving
+should now be in battle
+moving
+should now be in battle
+waiting for turn
+player turn
+Enchanting dk with epic
+Casting dk-enchanted
+Round lasted 0 minutes and 49 seconds.
+=========================================
+++++++++++++++++ ROUND 7 ++++++++++++++++
+=========================================
+finished loading
+moving
+should now be in battle
+moving
+should now be in battle
+moving
+should now be in battle
+waiting for turn
+player turn
+Enchanting dk with epic
+Casting dk-enchanted
+Round lasted 0 minutes and 58 seconds.
+=========================================
+++++++++++++++++ ROUND 8 ++++++++++++++++
+=========================================
+finished loading
+moving
+should now be in battle
+moving
+should now be in battle
+moving
+should now be in battle
+waiting for turn
+player turn
+Enchanting dk with epic
+Casting dk-enchanted
+Round lasted 1 minutes and 3 seconds.
+=========================================
+++++++++++++++++ ROUND 9 ++++++++++++++++
+=========================================
+finished loading
+moving
+should now be in battle
+moving
+should now be in battle
+moving
+should now be in battle
+waiting for turn
+player turn
+Enchanting dk with epic
+Casting dk-enchanted
+Round lasted 1 minutes and 3 seconds.
+==========================================
+++++++++++++++++ ROUND 10 ++++++++++++++++
+==========================================
+finished loading
+moving
+should now be in battle
+moving
+should now be in battle
+moving
+should now be in battle
+waiting for turn
+player turn
+Enchanting dk with epic
+Casting dk-enchanted
+Round lasted 1 minutes and 1 seconds.
+==========================================
+++++++++++++++++ ROUND 11 ++++++++++++++++
+==========================================
+finished loading
+moving
+should now be in battle
+moving
+should now be in battle
+moving
+should now be in battle
+waiting for turn
+player turn
+Enchanting dk with epic
+Casting dk-enchanted
+Round lasted 1 minutes and 1 seconds.
+==========================================
+++++++++++++++++ ROUND 12 ++++++++++++++++
+==========================================
+finished loading
+moving
+should now be in battle
+moving
+should now be in battle
+moving
+should now be in battle
+waiting for turn
+player turn
+Enchanting dk with epic
+Casting dk-enchanted
+Round lasted 0 minutes and 52 seconds.
+==========================================
+++++++++++++++++ ROUND 13 ++++++++++++++++
+==========================================
+finished loading
+moving
+should now be in battle
+moving
+should now be in battle
+moving
+should now be in battle
+waiting for turn
+player turn
+Enchanting dk with epic
+Casting dk-enchanted
+Round lasted 0 minutes and 51 seconds.
+==========================================
+++++++++++++++++ ROUND 14 ++++++++++++++++
+==========================================
+finished loading
+moving
+should now be in battle
+moving
+should now be in battle
+moving
+should now be in battle
+waiting for turn
+player turn
+Enchanting dk with epic
+Casting dk-enchanted
+Round lasted 0 minutes and 52 seconds.
+==========================================
+++++++++++++++++ ROUND 15 ++++++++++++++++
+==========================================
+finished loading
+moving
+should now be in battle
+moving
+should now be in battle
+moving
+should now be in battle
+waiting for turn
+player turn
+Enchanting dk with epic
+Casting dk-enchanted
+Round lasted 0 minutes and 51 seconds.
+==========================================
+++++++++++++++++ ROUND 16 ++++++++++++++++
+==========================================
+finished loading
+moving
+should now be in battle
+moving
+should now be in battle
+moving
+should now be in battle
+waiting for turn
+player turn
+Enchanting dk with epic
+Casting dk-enchanted
+Round lasted 0 minutes and 52 seconds.
+==========================================
+++++++++++++++++ ROUND 17 ++++++++++++++++
+==========================================
+finished loading
+moving
+should now be in battle
+moving
+should now be in battle
+moving
+should now be in battle
+waiting for turn
+player turn
+Enchanting dk with epic
+Casting dk-enchanted
+One or more spells couldn't be found: dk epic
+One or more spells couldn't be found: dk epic
+Round lasted 1 minutes and 45 seconds.
+==========================================
+++++++++++++++++ ROUND 18 ++++++++++++++++
+==========================================
+finished loading
+moving
+should now be in battle
+moving
+should now be in battle
+moving
+should now be in battle
+waiting for turn
+player turn
+Enchanting dk with epic
+Casting dk-enchanted
+Round lasted 0 minutes and 51 seconds.
+==========================================
+++++++++++++++++ ROUND 19 ++++++++++++++++
+==========================================

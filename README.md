@@ -2,6 +2,7 @@
 
 An API to interact and make bots in Wizard101
 
+<<<<<<< HEAD
 The wizAPI.py file contains a large number of functions to interact with Wizard101, Hopefully, you will find it useful :)
 
 # How to run
@@ -11,6 +12,11 @@ The wizAPI.py file contains a large number of functions to interact with Wizard1
 - Run `python -m pip install -r requirements.txt` in the command line to install all dependencies
 - To run farm_loremaster.py type in `python farm_loremaster.py` (It needs 2 w101 windows opened for this particular bot)
 - Make your own bots! Looks at the code of `farm_loremaster.py` and get the sense on how this API is used. Go through each of the functions in `wizAPI.py` and look at what they do! THen build your own for your purpose.
+=======
+I fixed some of the issues I had locally on my system with the wizAPI, you can feel free to use my updated version of the wizAPI and see if it runs properly on your system compared to the original. **TRY BOTH TO SEE WHICH RUNS CORRECTLY.**
+
+This code (gold.py) is not optimized to work 100% of the time, there are pieces in the code that I wanted to use such as the "is_GH_loading" which is exactly like "is_DS_loading" but for Wintertusk, that don't work the way it was intended, so I had to substitute it with timers to wait for a certain duration instead. There are lots of errors I faced where the player would just be standing there doing nothing when it had worked consinstently for a while, then proceeded to just give up. **MAKE SURE TO CHECK THE BOT EVERY 10 MINUTES IN CASE.**
+>>>>>>> parent of 6814286 (Update README.md)
 
 # IMPORTANT
 

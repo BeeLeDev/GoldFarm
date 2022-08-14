@@ -1,0 +1,1 @@
+open terminal, cd to GoldFarm folder, run gold.py > output.txt
