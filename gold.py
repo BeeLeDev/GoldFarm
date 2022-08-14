@@ -7,11 +7,10 @@ player = wizAPI().register_window()
 def await_finished_loading(self):
     print('loading')
     while player.is_GH_loading():
-        player.wait(.2)
-    print('done')
+        player.wait(1)
     while not player.is_idle():
-        player.wait(2)
-
+        player.wait(4)
+    print("finished loading")
 
 def print_separator(*args):
     sides = '+'*16
@@ -20,7 +19,6 @@ def print_separator(*args):
     print('='*l)
     print(_str)
     print('='*l)
-
 
 def print_time(timer):
     minutes = math.floor(timer/60)
@@ -35,16 +33,17 @@ while True:
     print_separator('ROUND', str(ROUND_COUNT))
 
     """ Attempt to enter the dungeon """
-
+    print("entering dungeon")
     player.press_key('x')
 
     #TEMPORARY UNTIL I SOLVE AWAIT_FINISHED_LOADING
-    player.wait(14)
+    #player.wait(14)
 
     #dungeon timer start
-    #player.wait(11)
-    #await_finished_loading(player)
-    print("finished loading")
+    print("timer start")
+    player.wait(11)
+    await_finished_loading(player)
+    player.screenshot("loading_screen.png")
 
     #if we are still in loading screen, wait
     #is_idle based on pink pet icon
@@ -57,7 +56,7 @@ while True:
     #i assume loading takes longer than 14 seconds, is.idle returns false which skips this, then waits for turn before going into battle
     while player.is_idle():
         print('moving')
-        player.hold_key('w', 2)
+        player.hold_key('w', 3)
         print('should now be in battle')
 
     print("waiting for turn")
@@ -81,15 +80,20 @@ while True:
             inFight = False
 
     print_time(time.time() - START_TIME)
+
     #in case game gets dumb and tries to move before fight is over
-    player.wait(1)
+    player.wait(1.5)
     #get out of the dungeon
+    print('exiting dungeon')
     player.hold_key('a', .55)
     player.hold_key('w', 2) 
+    player.wait(1.5)
+    print("dungeon exited")
 
     #apparently when the game loads too fast this doesnt work
-    #await_finished_loading(player)
-    player.wait(4.5)
+    await_finished_loading(player)
+
+    #player.wait(4.5)
 
     #wait for animation after finish loading
     #player.wait(.75)
