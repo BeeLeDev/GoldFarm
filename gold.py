@@ -7,9 +7,9 @@ player = wizAPI().register_window()
 def await_finished_loading(self):
     print('loading')
     while player.is_GH_loading():
-        player.wait(1)
+        player.wait(.2)
     while not player.is_idle():
-        player.wait(4)
+        player.wait(.5)
     print("finished loading")
 
 def print_separator(*args):
@@ -36,7 +36,7 @@ while True:
     print("entering dungeon")
     player.press_key('x')
 
-    #temporary timer for loading screen when exiting dungeon
+    #temporary timer for loading screen when exiting dungeon, in place of await_finished_loading()
     #player.wait(14)
 
     #dungeon timer start
@@ -44,6 +44,9 @@ while True:
     #extra 1 second added as i am taking walking time to spot position into consideration
     player.wait(11)
     await_finished_loading(player)
+
+    #player randomly skipped the moving after loading, placing a timer to see if it was due to the bot working too quickly
+    player.wait(1)
 
     #if we are still in loading screen, wait
     #is_idle based on pink pet icon
@@ -85,15 +88,18 @@ while True:
 
     #in case game gets dumb and tries to move before fight is over
     #this is usually where a bug happens as when the battle is over, is_idle can see the pink pet icon and returns that you are idle, it will then try to move... the problem is even when the pink pet icon appears, it does not mean you can move exactly yet, so a timer is placed to 'hopefully' fix that issue
-    player.wait(1.5)
+    player.wait(2.5)
     #get out of the dungeon
     print('exiting dungeon')
-    player.hold_key('a', .55)
-    player.hold_key('w', 2) 
+
+    #temporary rotation in place of face_arrow()
+    #player.hold_key('a', .55)
+    player.face_arrow()
+    player.hold_key('w', 3) 
     player.wait(1.5)
     print("dungeon exited")
 
     await_finished_loading(player)
 
-    #temporary timer for loading screen when exiting dungeon
+    #temporary timer for loading screen when exiting dungeon, in place of await_finished_loading()
     #player.wait(4.5)

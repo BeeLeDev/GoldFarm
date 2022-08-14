@@ -477,11 +477,12 @@ class wizAPI:
         self.set_active()
         pyautogui.keyDown('a')
         count = 0
-        while not self.pixel_matches_color((385, 531), (133, 120, 14), 2):
+        while not self.pixel_matches_color((407,519), (247, 231, 51), 2):
             count += 1
-            pass
         pyautogui.keyUp('a')
         self.hold_key('d', min(count / 100, 0.2))
+        #giving game client chaxnce to finish counter turn animation
+        self.wait(.55)
         return self
 
     def count_enemies(self):
