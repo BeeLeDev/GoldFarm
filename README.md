@@ -3,7 +3,7 @@ Gold farming code using wizAPI by Jake Belanger:
 https://github.com/Jacob124/wizAPI
 
 **DON'T FORGET TO CHANGE THE SPELLS THAT YOU WANT TO USE IN LINE 63 AND 64**
-**ADD THE .PNG OF THE CARD BASE AND ITS ENCHANTED**
+**\nADD THE .PNG OF THE CARD BASE AND ITS ENCHANTED**
 
 This code was made for the dungeon at Wintertusk - Vestrilund farming Halfang Bristlecrown.
 
