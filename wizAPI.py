@@ -3,7 +3,6 @@ import pyautogui
 import cv2
 import time
 
-
 class wizAPI:
     def __init__(self, handle=None):
         self._handle = handle
@@ -131,7 +130,8 @@ class wizAPI:
             region[0] += wx
             region[1] += wy
 
-        pyautogui.screenshot(name, region=region)
+        #ADDED RETURN AS A TEMPORARY THING
+        return pyautogui.screenshot(name, region=region)
 
     def teleport_to_friend(self, match_img):
         """
@@ -208,13 +208,21 @@ class wizAPI:
         THRESHOLD = 10
         return not self.pixel_matches_color(POSITION, COLOR, threshold=THRESHOLD)
 
+    #NOT FUNCTIONAL, colors match even when they are way off the threshold which shouldn't happen ex. RGB (68, 15, 77) == RGB (155, 114, 208), we know this is not true, but the code believes it to be true.
     def is_mana_low(self):
         self.set_active()
-        # Matches a pixel in the lower third of the mana globe
-        POSITION = (121, 582)
-        COLOR = (49, 25, 148)
+        #Matches a pixel in the lower third of the mana globe
+        POSITION = (98, 597)
+        COLOR = (155, 114, 208)
         THRESHOLD = 10
         return not self.pixel_matches_color(POSITION, COLOR, threshold=THRESHOLD)
+
+    def low_mana(self):
+        mana = self.screenshot('mana.png')
+        if mana.getpixel((98, 597)) == (155, 114, 208):
+            return True
+        else:
+            return False
 
     def use_potion_if_needed(self):
         mana_low = self.is_mana_low()
@@ -225,7 +233,7 @@ class wizAPI:
         if health_low:
             print('Health is low, using potion')
         if mana_low or health_low:
-            self.click(160, 590, delay=.2)
+            self.click(170, 603, delay=.2)
 
     def pass_turn(self):
         self.click(254, 398, delay=.5).move_mouse(200, 400)

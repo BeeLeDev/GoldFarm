@@ -3,6 +3,10 @@
 =========================================
 entering dungeon
 timer start
+checking for low mana
+using potion
+6
+waiting to load
 loading
 finished loading
 moving
@@ -13,9 +17,10 @@ waiting for turn
 player turn
 Enchanting dk with epic
 Casting dk-enchanted
-Round lasted 1 minutes and 5 seconds.
+Round lasted 0 minutes and 50 seconds.
 exiting dungeon
 dungeon exited
+waiting to load
 loading
 finished loading
 =========================================
@@ -23,76 +28,12 @@ finished loading
 =========================================
 entering dungeon
 timer start
+checking for low mana
+using potion
+11
+waiting to load
 loading
 finished loading
-waiting to move
-moving
-should now be in battle
 moving
 should now be in battle
 waiting for turn
-player turn
-Enchanting dk with epic
-Casting dk-enchanted
-Round lasted 0 minutes and 59 seconds.
-exiting dungeon
-dungeon exited
-loading
-finished loading
-=========================================
-++++++++++++++++ ROUND 3 ++++++++++++++++
-=========================================
-entering dungeon
-timer start
-loading
-finished loading
-moving
-should now be in battle
-moving
-should now be in battle
-waiting for turn
-player turn
-Enchanting dk with epic
-Casting dk-enchanted
-Round lasted 1 minutes and 16 seconds.
-exiting dungeon
-dungeon exited
-loading
-finished loading
-=========================================
-++++++++++++++++ ROUND 4 ++++++++++++++++
-=========================================
-entering dungeon
-timer start
-loading
-finished loading
-waiting to move
-waiting to move
-moving
-should now be in battle
-moving
-should now be in battle
-waiting for turn
-player turn
-Enchanting dk with epic
-Casting dk-enchanted
-Round lasted 0 minutes and 56 seconds.
-exiting dungeon
-dungeon exited
-loading
-finished loading
-=========================================
-++++++++++++++++ ROUND 5 ++++++++++++++++
-=========================================
-entering dungeon
-timer start
-loading
-finished loading
-moving
-should now be in battle
-moving
-should now be in battle
-waiting for turn
-player turn
-Enchanting dk with epic
-Casting dk-enchanted

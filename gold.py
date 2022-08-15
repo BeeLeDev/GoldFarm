@@ -4,7 +4,10 @@ import math
 player = wizAPI().register_window()
 
 """ loading screen, needs fix when page loads too fast"""
-def await_finished_loading(self):
+def await_finished_loading(time_buffer):
+    print('waiting to load')
+    #when we use await_finished_loading, we expect to be in the loading screen already, this is dangerous as if we didn't reach the exit before this method has been called, it would not run as player would not be in the loading screen and would see player as idle, noth while loops would be skipped.
+    player.wait(time_buffer)
     print('loading')
     while player.is_GH_loading():
         player.wait(.2)
@@ -42,10 +45,23 @@ while True:
     #dungeon timer start
     print("timer start")
     #extra 1 second added as i am taking walking time to spot position into consideration
-    player.wait(11)
-    await_finished_loading(player)
+    dungeon_timer = time.time() + 11
+    
+    print('checking for low mana')
+    while time.time() < dungeon_timer:
+        if player.low_mana():
+            print('using potion')
+            player.click(170, 300, delay=.2)
+            break
+        #temp so i dont waste potions
+        #170 603    
 
-    #player randomly skipped the moving after loading, placing a timer to see if it was due to the bot working too quickly
+    #for debug purposes
+    #print(math.ceil(dungeon_timer - time.time() + 1))
+    
+    await_finished_loading(math.ceil(dungeon_timer - time.time() + 1))
+
+    #player randomly skipped the moving action after loading, placing a timer to see if it was due to the bot working too quickly
     player.wait(1)
 
     #if we are still in loading screen, wait
@@ -96,10 +112,9 @@ while True:
     #player.hold_key('a', .55)
     player.face_arrow()
     player.hold_key('w', 3) 
-    player.wait(1.5)
     print("dungeon exited")
 
-    await_finished_loading(player)
+    await_finished_loading(1.5)
 
     #temporary timer for loading screen when exiting dungeon, in place of await_finished_loading()
     #player.wait(4.5)
