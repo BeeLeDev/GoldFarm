@@ -51,10 +51,8 @@ while True:
     while time.time() < dungeon_timer:
         if player.low_mana():
             print('using potion')
-            player.click(170, 300, delay=.2)
-            break
-        #temp so i dont waste potions
-        #170 603    
+            player.click(170, 603, delay=.2)
+            break  
 
     #for debug purposes
     #print(math.ceil(dungeon_timer - time.time() + 1))
