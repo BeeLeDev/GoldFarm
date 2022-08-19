@@ -92,7 +92,6 @@ class wizAPI:
         """ Matches the color of a pixel relative to the window's position """
         wx, wy = self.get_window_rect()[:2]
         x, y = coords
-        # self.move_mouse(x, y)
         return pyautogui.pixelMatchesColor(x + wx, y + wy, rgb, tolerance=threshold)
 
     def move_mouse(self, x, y, speed=.25):
@@ -178,7 +177,7 @@ class wizAPI:
         return self.pixel_matches_color((108, 551), (25, 127, 5), 20)
 
     def is_GH_loading(self):
-        """ Matches an orange pixel on Wizard101 display in the Grizzleheim loading screen """
+        """ Matches a blue pixel in the Grizzleheim loading screen """
         self.set_active()
         return self.pixel_matches_color((155, 554), (253, 127, 5), 20)    
 
@@ -219,11 +218,8 @@ class wizAPI:
 
     def low_mana(self):
         mana = self.screenshot('mana.png')
-        if mana.getpixel((98, 597)) == (155, 114, 208):
-            return True
-        else:
-            return False
-
+        return mana.getpixel((98, 597)) == (155, 114, 208)
+            
     def use_potion_if_needed(self):
         mana_low = self.is_mana_low()
         health_low = self.is_health_low()
@@ -418,7 +414,7 @@ class wizAPI:
 
     def enchant(self, spell_name, enchant_name, threshold=0.1, silent_fail=False):
 
-        #screenshot during enchant period as it would mean we would be in card selection which is when the monster hp pops up.
+        #we screenshot during enchant period as it would mean we would be in card selection which is when the monster hp pops up.
         #we screenshot it to be able to change the values in count_enemies method.
         self.screenshot('findHealth.png')
 
@@ -494,26 +490,21 @@ class wizAPI:
         return self
 
     def count_enemies(self):
+        #don't forget to change this too
         Y = 67
         #red
         COLOR = (255, 0, 0)
         num_enemies = 0
         for i in range(4):
             #CHANGE THE VALUES 'H' AND 'P' BASED ON MONSTER YOU ARE FARMING
-            #USE 'findHealth.png' in this folder and paint.net to find x and y of red pixels in health bars
-            """
-            (H, P)
-            Ghultures: 148, 169
-            Splithoof Barbarian: 148, 169
-            """
+            #USE 'findHealth.png'm after running the bot in a battle once, in this folder and windows paint to find x and y of one red pixel on the first hp bar, and the next red pixel in the same spot on the second hp bar, etc.
             H = 148
             P = 169
-            #H is position of one of the red pixels in the 1ST health bar
-            #P is difference between the 1ST and the 2ND red pixels in the health bar (usually 169)
+            #H is the x position of one of the red pixels in the **1ST** health bar
+            #P is distance between the 1ST 'H' and the 2ND 'H' in the health bar (usually 169)
             X = (P * (i)) + H
             if self.pixel_matches_color((X, Y), COLOR, threshold=30):
                 num_enemies += 1
-
 
         if num_enemies == 1:
             print(num_enemies, 'enemy in battle')
